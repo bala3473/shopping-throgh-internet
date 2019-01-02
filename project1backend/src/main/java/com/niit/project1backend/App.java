@@ -2,6 +2,7 @@ package com.niit.project1backend;
 
 import java.util.List;
 
+
 import javax.persistence.Id;
 
 import org.springframework.context.ApplicationContext;
@@ -12,6 +13,7 @@ import com.niit.configuration.DBConfiguration;
 import com.niit.dao.ProductDao;
 import com.niit.dao.ProductDaoImpl;
 import com.niit.models.Product;
+
 
 /**
  * Hello world!
@@ -30,13 +32,13 @@ public class App
        
       ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
 
-//      Product product= new Product();
-//      product.setId();
-//      product.setDescription("hp");
-//      product.setPrice(20000);
-//      product.setProductname("lap");   //add product
-//      product.setQuantity(6);
-//      productDao.addProduct(product);
+      Product product= new Product();
+      product.setId(1);
+      product.setDescription("hp");
+      product.setPrice(20000);
+      product.setProductname("lap");   //add product
+      product.setQuantity(6);
+      productDao.addProduct(product);
 
 
 //      Product product = productDao.getProduct(13);

@@ -21,23 +21,8 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-  <dependency>
-    <groupId>org.hibernate</groupId>
-	<artifactId>hibernate-validator</artifactId>
-	<version>4.2.0.Final</version>
- </dependency>
-  <dependency>
-	<groupId>javax.validation</groupId>
-	<artifactId>validation-api</artifactId>
-	<version>1.0.0.GA</version>
-  </dependency>
     
-    <dependency>
-    	<groupId>org.springframework</groupId>
-    	<artifactId>spring-webmvc</artifactId>
-    	<version>4.3.2.RELEASE</version>
-    </dependency>
-    <dependency>
+<dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
     <version>4.0.1</version>
@@ -48,11 +33,18 @@
 			<artifactId>spring-orm</artifactId>
 			<version>4.3.2.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>4.3.2.RELEASE</version>
-		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>4.3.2.RELEASE</version>
+</dependency>
+
+
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -68,16 +60,19 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>4.0.1.Final</version>
 		</dependency>
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
-			<version>1.0.1.Final</version>
-		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+<dependency>
+    <groupId>org.hibernate.javax.persistence</groupId>
+    <artifactId>hibernate-jpa-2.1-api</artifactId>
+    <version>1.0.0.Final</version>
+</dependency>
+		
 		<!-- h2 database -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>1.4.191</version>
+			<version>1.4.197</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-pool</groupId>
@@ -92,16 +87,6 @@
 			<version>1.4</version>
 		</dependency>
 		<dependency>
-		<groupId>org.hibernate</groupId>
-		<artifactId>hibernate-validator</artifactId>
-	     <version>4.2.0.Final</version>
-		</dependency>
-		<dependency>
-	<groupId>javax.validation</groupId>
-	<artifactId>validation-api</artifactId>
-	<version>1.0.0.GA</version>
-		</dependency>
-		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.2.0.Final</version>
@@ -111,7 +96,18 @@
 			<artifactId>validation-api</artifactId>
 			<version>1.0.0.GA</version>
 		</dependency>
+		<!-- for uploading image -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
 		
- 
+		
   </dependencies>
 </project>

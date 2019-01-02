@@ -2,7 +2,6 @@ package com.niit.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
 
 import com.niit.models.Category;
 import com.niit.models.Product;
@@ -12,10 +11,6 @@ void saveOrUpdate(Product product);//if product.id==0, then it will insert,if pr
 Product getProduct(int id);
 void deleteProduct(int id);
 List<Product> getAllProducts();
-void addProduct(Product product);
-Product getAllProduct(Product p1);
-void updateproduct(Product p);
-void deleteProduct(Product intid);
 List<Category> getAllCategories();
-
+void addProduct(Product product);
 }
