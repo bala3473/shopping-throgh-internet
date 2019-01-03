@@ -1,6 +1,7 @@
 package com.niit.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -16,4 +17,20 @@ public class HomeController {
     public String aboutUs(){
     	return "aboutUsPage";
     }
+    @RequestMapping("/login")
+    public String login(){
+    	return "login";
+    }
+    @RequestMapping("/loginerror")
+    public String loginError(Model model){
+    	model.addAttribute("loginError","Invalid Email/password");
+    	return "login";
+    }
+    @RequestMapping("/logoutsuccess")
+    public String logoutSuccess(Model model){
+    	model.addAttribute("logoutSuccess","Loggedout Successfully");
+    	return "login";
+    }
 }
+
+

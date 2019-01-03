@@ -27,5 +27,11 @@
   </bean> 
   
     
-  <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources>  
+  <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources> 
+  <mvc:annotation-driven>
+  <mvc:argument-resolvers>
+  <bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver"></bean>
+  </mvc:argument-resolvers>
+  </mvc:annotation-driven>     
+   
 </beans>

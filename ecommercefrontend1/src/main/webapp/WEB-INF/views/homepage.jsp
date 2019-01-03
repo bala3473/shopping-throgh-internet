@@ -24,7 +24,7 @@
  </ol>
  <div class="carousel-inner" slide="listbox">
  <div class="item active">
-                    <img class="first-slide" src="resources/images/Car5.png" alt="first slide" height="80%" width="80%" class="img-circle"> 
+                    <img class="first-slide" src="resources/images/hplap.png" alt="first slide" height="80%" width="80%" class="img-circle"> 
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>WELCOME TO THE CAR STORE</h1>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
   <div class="item">
-                    <img class="second-slide" src="resources/images/Car2.png" alt="Second slide" height="80%" width="80%">
+                    <img class="second-slide" src="resources/images/m1.png" alt="Second slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>The Car Store.</h1>
@@ -42,7 +42,7 @@
                     </div>
                 </div> 
    <div class="item">
-                    <img class="third-slide" src="resources/images/Car3.png" alt="Third slide" height="80%" width="80%">
+                    <img class="third-slide" src="resources/images/m1.png" alt="Third slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>The Car You Love</h1>
@@ -52,7 +52,7 @@
                 </div>
                 
    <div class="item">
-                    <img class="forth-slide" src="resources/images/Car6.png" alt="forth slide" height="80%" width="80%">
+                    <img class="forth-slide" src="resources/images/hplap.png" alt="forth slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Any car can be a "cool" car</h1>
@@ -61,7 +61,7 @@
                     </div>
                 </div>   
     <div class="item">
-                    <img class="fifth-slide" src="resources/images/Car1.png" alt="forth slide" height="80%" width="80%">
+                    <img class="fifth-slide" src="resources/images/f5.png" alt="forth slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Any car can be a "cool" car</h1>

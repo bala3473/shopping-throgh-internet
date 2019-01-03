@@ -25,5 +25,14 @@ private SessionFactory sessionFactory;
 		session.save(customer);
 
 	}
+	public boolean isEmailUnique(String email) {//this email is entered by the new user in the registration form
+		Session session=sessionFactory.getCurrentSession();
+		User user=(User)session.get(User.class, email);//select * from user where email=?
+		if(user==null)//no records, email is unique
+			return true;
+		else  //1 record, email already exists..
+			return false;
+		
+	}
 
 }
