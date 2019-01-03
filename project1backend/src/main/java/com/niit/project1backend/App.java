@@ -32,13 +32,13 @@ public class App
        
       ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
 
-      Product product= new Product();
-      product.setId(1);
-      product.setDescription("hp");
-      product.setPrice(20000);
-      product.setProductname("lap");   //add product
-      product.setQuantity(6);
-      productDao.addProduct(product);
+//      Product product= new Product();
+//      product.setId(1);
+//      product.setDescription("hp");
+//      product.setPrice(20000);
+//      product.setProductname("lap");   //add product
+//      product.setQuantity(6);
+//      productDao.addProduct(product);
 
 
 //      Product product = productDao.getProduct(13);

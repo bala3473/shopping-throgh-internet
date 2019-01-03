@@ -15,17 +15,16 @@
 <body>
 <div class="container">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-<!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
+<!-- Indicators -->  <ol class="carousel-indicators">
+ <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+ <li data-target="#myCarousel" data-slide-to="1"></li>
+ <li data-target="#myCarousel" data-slide-to="2"></li>
+ <li data-target="#myCarousel" data-slide-to="3"></li>
+ <li data-target="#myCarousel" data-slide-to="4"></li>
  </ol>
- <div class="carousel-inner" role="listbox">
+ <div class="carousel-inner" slide="listbox">
  <div class="item active">
-                    <img class="first-slide" src="resources/images/Car1.png" alt="first slide" height="80%" width="80%" class="img-circle"> 
+                    <img class="first-slide" src="resources/images/Car5.png" alt="first slide" height="80%" width="80%" class="img-circle"> 
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>WELCOME TO THE CAR STORE</h1>
@@ -62,7 +61,7 @@
                     </div>
                 </div>   
     <div class="item">
-                    <img class="fifth-slide" src="resources/images/Car5.png" alt="forth slide" height="80%" width="80%">
+                    <img class="fifth-slide" src="resources/images/Car1.png" alt="forth slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Any car can be a "cool" car</h1>
