@@ -23,7 +23,7 @@ Select Category   : <form:select path="category.categoryid">
 <form:option value="${c.categoryid }">${c.categoryname}</form:option>
 </c:forEach>
 					</form:select>  
-Upload Image      : <form:input path="image" type="file"/>
+Upload Images     : <form:input path="image" type="file"/>
 					
 <input type="submit" value="Update Product">
 <%--once you enter the data in the input fields, it will call the setter methods

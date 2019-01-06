@@ -15,6 +15,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="<c:url value='/resources/css/navbarcolor.css'></c:url>">
 <link rel="stylesheet" href="<c:url value='/resources/css/precolor.css'></c:url>">
+
+<!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -34,7 +42,7 @@
 <div class="collapse navbar-collapse" id="collapse-example">
 
 <ul class="nav navbar-nav" id="links">
-<li><a href="<c:url value='/home'></c:url>">Home</a></li>
+<li><a href="<c:url value='/home'></c:url>"><span class="glyphicon glyphicon-home"></span>Home</a></li>
 <li><a href="<c:url value='/aboutus'></c:url>">About Us</a></li>
 <li><a href="<c:url value='/all/getallproducts'></c:url>">Browse all products</a></li>
 <security:authorize access="hasRole('ROLE_ADMIN')">
@@ -54,7 +62,7 @@
 <li><a href="<c:url value='/login'></c:url>"><span class="glyphicon glyphicon-log-in"></span>Sign In</a></li>
 </c:if>
 <c:if test="${pageContext.request.userPrincipal.name!=null }">
-<li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+<li><a href="<c:url value='/cart/getcartitems'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${cartSize })</a></li>
 <li><a href="<c:url value='/j_spring_security_logout'></c:url>"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a></li>
 <li><a href="">Welcome ${pageContext.request.userPrincipal.name }</a></li>
 </c:if>
@@ -64,4 +72,5 @@
 </div>
 </body>
 </html>
+
 

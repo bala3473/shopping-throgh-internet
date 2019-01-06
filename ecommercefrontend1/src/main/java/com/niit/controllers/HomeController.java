@@ -1,8 +1,16 @@
 package com.niit.controllers;
 
+import java.security.Principal;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.niit.models.CartItem;
 
 @Controller
 public class HomeController {
@@ -15,7 +23,7 @@ public class HomeController {
 	}
     @RequestMapping("/aboutus")
     public String aboutUs(){
-    	return "aboutUsPage";
+    	return "aboutuspage";
     }
     @RequestMapping("/login")
     public String login(){
@@ -31,6 +39,17 @@ public class HomeController {
     	model.addAttribute("logoutSuccess","Loggedout Successfully");
     	return "login";
     }
+//    @RequestMapping("/home")
+//	public String homePage(@AuthenticationPrincipal Principal principal,HttpSession session){
+//        List<CartItem> cartItems=null;
+//    	if(principal!=null){
+//         cartItems=cartItemDao.getCartItems(principal.getName());
+//    	session.setAttribute("cartSize",cartItems.size());
+//    	
+//    	}
+//		return "homePage";
+//	}
+
 }
 
 

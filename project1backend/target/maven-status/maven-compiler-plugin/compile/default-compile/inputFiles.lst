@@ -1,5 +1,6 @@
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\dao\CustomerDaoImpl.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\Product.java
+C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\dao\CartItemDao.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\Authorities.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\Category.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\User.java
@@ -7,7 +8,10 @@ C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\ni
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\dao\ProductDao.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\dao\CustomerDao.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\Customer.java
+C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\CustomerOrder.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\dao\ProductDaoImpl.java
+C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\dao\CartItemDaoImpl.java
+C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\CartItem.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\ShippingAddress.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\configuration\DBConfiguration.java
 C:\Users\Admin\git\shopping-throgh-internet\project1backend\src\main\java\com\niit\models\BillingAddress.java

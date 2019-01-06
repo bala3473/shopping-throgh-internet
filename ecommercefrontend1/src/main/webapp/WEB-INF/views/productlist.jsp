@@ -6,6 +6,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var searchCondition='${searchCondition}'
+	$('.table').DataTable({
+		"lengthMenu":[[2,5,-1],[2,5,"All"]],
+	    "oSearch" : {
+		"sSearch" : searchCondition 
+		}
+	})
+})
+</script>
 </head>
 <body>
 	<%--  forEach is for iterating collection of objects
@@ -43,8 +55,6 @@ p=product object from the list
         <a href="<c:url value='/admin/getupdateform?id=${p.id }'></c:url>"><span class="glyphicon glyphicon-pencil"></span></a>
         </security:authorize>
         </td>
-
-
         </tr>
 		</c:forEach>
 		</tbody>
@@ -52,6 +62,4 @@ p=product object from the list
 	</div>
 </body>
 </html>
-
-
 

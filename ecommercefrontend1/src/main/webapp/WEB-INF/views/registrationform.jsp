@@ -105,7 +105,7 @@ LOGIN CREDENTIALS
 </tr>
 <tr><td>
 <form:hidden path="user.enabled" value="true"/></td>
-<td><form:hidden path="user.authorities.role" value="ROLE_ADMIN"></form:hidden></td>
+<td><form:hidden path="user.authorities.role" value="ROLE_USER"></form:hidden></td>
 </tr>
 </table>
 <hr>

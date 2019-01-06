@@ -27,8 +27,8 @@
                     <img class="first-slide" src="resources/images/hplap.png" alt="first slide" height="80%" width="80%" class="img-circle"> 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>WELCOME TO THE CAR STORE</h1>
-                            <p>Here You Can Browse And Buy Cars.Order Now For Your Amazing New Arrivals</p>
+                            <h1>WELCOME TO THE ON-LINE MARKET</h1>
+                            <p>Here You Can Browse And Buy LAPS AND MOBILES ALSO BOOKS.Order Now For Your Amazing New Arrivals</p>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     <img class="second-slide" src="resources/images/m1.png" alt="Second slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Car Store.</h1>
+                            <h1>!!!WELCOME TO THE ON-LINE MARKET!!!</h1>
                             <p>online shopping can make your life more easier</p>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
                     <img class="third-slide" src="resources/images/m1.png" alt="Third slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Car You Love</h1>
-                            <p>live Freely,Work Happily And Drive Safely!!</p>
+                            <h1>The Mobile You Love</h1>
+                            <p>live Freely,Work Happily And keep Safely!!</p>
                         </div>
                     </div>
                 </div>
