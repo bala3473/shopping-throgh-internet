@@ -5,22 +5,39 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.niit.dao.CartItemDao;
+import com.niit.dao.ProductDao;
 import com.niit.models.CartItem;
+import com.niit.models.Category;
 
 @Controller
 public class HomeController {
+	@Autowired
+	private CartItemDao cartItemDao;
+	@Autowired
+	private ProductDao productDao;
 	public HomeController(){
 		System.out.println("homeController bean is created..");
 	}
-    @RequestMapping("/home")
-	public String homePage(){
+	@RequestMapping("/home")
+	public String homePage(@AuthenticationPrincipal Principal principal,HttpSession session){
+        List<CartItem> cartItems=null;
+    	if(principal!=null){
+         cartItems=cartItemDao.getCartItems(principal.getName());
+    	session.setAttribute("cartSize",cartItems.size());
+    	
+    	}
+    	List<Category> categories=productDao.getAllCategories();
+    	session.setAttribute("categories", categories);
 		return "homepage";
 	}
+    
     @RequestMapping("/aboutus")
     public String aboutUs(){
     	return "aboutuspage";
@@ -39,16 +56,6 @@ public class HomeController {
     	model.addAttribute("logoutSuccess","Loggedout Successfully");
     	return "login";
     }
-//    @RequestMapping("/home")
-//	public String homePage(@AuthenticationPrincipal Principal principal,HttpSession session){
-//        List<CartItem> cartItems=null;
-//    	if(principal!=null){
-//         cartItems=cartItemDao.getCartItems(principal.getName());
-//    	session.setAttribute("cartSize",cartItems.size());
-//    	
-//    	}
-//		return "homePage";
-//	}
 
 }
 

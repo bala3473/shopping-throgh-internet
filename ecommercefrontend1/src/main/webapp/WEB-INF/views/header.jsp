@@ -30,7 +30,7 @@
 <div class="container">
 <nav class="navbar navbar-default" id="navcolor">
 <div  class="navbar-header">
-<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/niit.jpg'></c:url>" height="30px" width="70px"></a>
+<a href="" class="navbar-brand"><img src="<c:url value='/resources/images/hplap.png'></c:url>" height="30px" width="70px"></a>
 <button type="button" class="navbar-toggle collapsed" 
    data-toggle="collapse" data-target="#collapse-example" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -52,9 +52,10 @@
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Select By Cateogory
 			<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-			<li><a href="">Furniture</a></li>
-			<li><a href="">Kitchen and Dining</a></li>
-			<li><a href="">Educational Books</a></li>
+			<c:forEach var="c" items="${categories }">
+			<li><a href="<c:url value='/all/searchbycategory?searchCondition=${c.categoryname }'></c:url>">${c.categoryname }</a></li>
+			</c:forEach>
+			<li><a href="<c:url value='/all/searchbycategory?searchCondition=All'></c:url>"">All</a></li>
 			</ul>
 			</li>
 <c:if test="${pageContext.request.userPrincipal.name==null }">			

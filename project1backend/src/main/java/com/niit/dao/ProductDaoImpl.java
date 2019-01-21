@@ -61,7 +61,7 @@ private SessionFactory sessionFactory;
 	public void addProduct(Product product) {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
-		session.saveOrUpdate(product);
+		session.save(product);
  //    return product;			
 	}
 

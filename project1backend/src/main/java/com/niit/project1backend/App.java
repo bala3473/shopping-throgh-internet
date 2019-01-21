@@ -3,11 +3,13 @@ package com.niit.project1backend;
 import java.util.List;
 
 
+
 import javax.persistence.Id;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.niit.configuration.DBConfiguration;
 import com.niit.dao.ProductDao;
@@ -22,9 +24,11 @@ import com.niit.models.Product;
 
 public class App  
 { 
-    public static void main( String[] args )
+
+	public static void main( String[] args )
     {
-      System.out.println( "Hello World!" );
+    		
+  //System.out.println( "hello world");
         
         
       //CREATE SPRING CONTAINER , CONFIGURATION DETAILS TO THE CONTAINER
@@ -75,6 +79,7 @@ public class App
 //   
 }
 }
+
     
  
 

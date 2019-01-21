@@ -1,6 +1,17 @@
 com\niit\models\Category.class
+com\niit\models\CustomerOrder.class
+com\niit\models\BillingAddress.class
+com\niit\models\Authorities.class
 com\niit\models\Product.class
 com\niit\dao\ProductDaoImpl.class
+com\niit\models\Customer.class
+com\niit\dao\CustomerDao.class
+com\niit\dao\CustomerDaoImpl.class
+com\niit\dao\CartItemDao.class
+com\niit\dao\CartItemDaoImpl.class
+com\niit\models\ShippingAddress.class
+com\niit\models\User.class
 com\niit\configuration\DBConfiguration.class
+com\niit\models\CartItem.class
 com\niit\dao\ProductDao.class
 com\niit\project1backend\App.class

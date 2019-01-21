@@ -55,7 +55,7 @@
                     <img class="forth-slide" src="resources/images/hplap.png" alt="forth slide" height="80%" width="80%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Any car can be a "cool" car</h1>
+                            <h1>"~~~Any THING IS AVALIBLE IN THIS STORE BUY BY SIMPLY..."</h1>
                             <p>your life,your car...you own it!!</p>
                         </div>
                     </div>

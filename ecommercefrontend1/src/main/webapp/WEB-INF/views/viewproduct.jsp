@@ -11,7 +11,7 @@
 <div class="container">
 <b>Product Details</b>
 <pre>
-<img src="<c:url value="/resources/images/${productAttr.id }.png"></c:url>" height="50px" width="50px" class="img-circle">
+<img src="<c:url value="/resources/images/${productAttr.id }.png"></c:url>" height="50%" width="50%" class="img-circle">
 <b>Product Name  :</b> ${ productAttr.productname}
 <b>Description   :</b>${productAttr.description }
 <b>Price         :</b>${productAttr.price }

@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -29,7 +28,6 @@ import com.niit.models.Product;
 public class ProductController {
 	@Autowired
 private ProductDao productDao;//automatically wire a bean of type ProductDao (ProductDaoImpl)
-	private ServletRequest request;
 	public ProductController(){
 		System.out.println("ProductController bean is created");
 	}
@@ -51,19 +49,17 @@ private ProductDao productDao;//automatically wire a bean of type ProductDao (Pr
 		return "viewproduct";
 	}
 	@RequestMapping(value="/admin/deleteproduct/{id}")
-	public String deleteProduct(@PathVariable int id){
+	public String deleteProduct(@PathVariable int id,HttpServletRequest request){
 		Path paths=
-				Paths.get(request.getServletContext().getRealPath("/")+"/WEB-INF/resources/images/"+id+".png");
-				if(Files.exists(paths)){
-					try {
-						Files.delete(paths);
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				
-	
+		Paths.get(request.getServletContext().getRealPath("/")+"/WEB-INF/resources/images/"+id+".png");
+		if(Files.exists(paths)){
+			try {
+				Files.delete(paths);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		productDao.deleteProduct(id);
 		return "redirect:/all/getallproducts"; //redirect the request to the handler method getAllProducts()
 	}
@@ -88,7 +84,7 @@ private ProductDao productDao;//automatically wire a bean of type ProductDao (Pr
 	}
      //read the value of the modelattribute "product"
 	@RequestMapping(value="/admin/addproduct")
-    public String addProduct(@ModelAttribute @Valid Product product,BindingResult result,Model model){
+    public String addProduct(@ModelAttribute @Valid Product product,BindingResult result,Model model,HttpServletRequest request){
 		if(result.hasErrors())//if values are incorrect, if it violates the hibernate validator constraints
 		{
 			model.addAttribute("categories",productDao.getAllCategories());
@@ -120,7 +116,7 @@ private ProductDao productDao;//automatically wire a bean of type ProductDao (Pr
     }
 	
 	@RequestMapping(value="/admin/updateproduct")
-	public String updateProduct(@ModelAttribute @Valid Product product,BindingResult result,Model model){
+	public String updateProduct(@ModelAttribute @Valid Product product,BindingResult result,Model model,HttpServletRequest request){
 		if(result.hasErrors()){
 			model.addAttribute("categories",productDao.getAllCategories());
 			return "updateproductform";
@@ -129,7 +125,8 @@ private ProductDao productDao;//automatically wire a bean of type ProductDao (Pr
 		//in the table, there is a record with the same product id.
 		System.out.println("AFTER FORM SUBMIT" + product.getId());
 		productDao.saveOrUpdate(product);
-Path path=Paths.get(request.getServletContext().getRealPath("/")+ "/WEB-INF/resources/images/"+product.getId()+".png");
+		
+		Path path=Paths.get(request.getServletContext().getRealPath("/")+ "/WEB-INF/resources/images/"+product.getId()+".png");
 		
 		MultipartFile img=product.getImage();//image uploaded by the user
 		if(img!=null && !img.isEmpty()){
@@ -147,6 +144,16 @@ Path path=Paths.get(request.getServletContext().getRealPath("/")+ "/WEB-INF/reso
 		
 		return "redirect:/all/getallproducts";
 		
+	}
+	@RequestMapping("/all/searchbycategory")
+	public String searchByCategory(@RequestParam String searchCondition,Model model){
+		if(searchCondition.equals("All"))
+			model.addAttribute("searchCondition","");
+		else
+			model.addAttribute("searchCondition",searchCondition);
+		List<Product> products=productDao.getAllProducts();
+		model.addAttribute("products",products);
+		return "productlist";
 	}
 }
 
